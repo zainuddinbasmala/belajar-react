@@ -23,7 +23,7 @@ function App() {
       <div className="flex justify-between mt-8">
         <h1 className="text-2xl font-bold">TokoKita</h1>
         <div className="flex w-full justify-center items-center">
-        <input type="text" placeholder="Search Products, Categories" className="w-1/3 border border-gray-300 rounded-md pl-4 py-4"/>
+        <input type="text" placeholder="Search Products, Categories" className="w-1/3 border border-gray-300 rounded-md pl-2 py-2"/>
         <img src="./images/search.png" className="w-4 h-4 -ml-8" />
       </div>
         
@@ -51,8 +51,8 @@ function App() {
 
 {/* NAV BAR */}
 
-      <div className="flex">
-          <div className="p-5 w-1/2">
+      <div className="flex flex-row">
+          <div className="p-5 basis-1/2">
             <h2 className="text-lg font-medium mb-3 mt-3">Categories</h2>
           <div className="flex justify-between">
             <label>Bolu</label>
