@@ -49,25 +49,32 @@ function App() {
         </ul>
       </div>
 
-      <div className="bg-white container mx-auto">
-        <h2 className="text-lg font-medium mb-3">Categories</h2>
-        <label>Bolu</label>
-        <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">320</label>
-        </div>
-        <div className="flex">
-        <label>Mie</label>
-        <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">112</label>
-        </div>
-        <div className="flex">
-        <label>Pizza</label>
-        <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">32</label>
-        </div>
-        <div className="flex">
-        <label>Dessert</label>
-        <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">48</label>
-      </div>
+{/* NAV BAR */}
 
-      <div className="pt-5">
+      <div className="flex">
+          <div className="p-5 w-1/2">
+            <h2 className="text-lg font-medium mb-3 mt-3">Categories</h2>
+          <div className="flex justify-between">
+            <label>Bolu</label>
+            <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">320</label>
+          </div>
+
+          <div className="flex justify-between">
+            <label>Mie</label>
+            <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">112</label>
+          </div>
+
+          <div className="flex justify-between">
+            <label>Pizza</label>
+            <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">32</label>
+          </div>
+
+          <div className="flex justify-between">
+            <label>Dessert</label>
+            <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">48</label>
+          </div>
+
+          <div className="pt-5">
         <h2 className="flex text-lg font-medium mb-3">Order By</h2>
         <div>
           <input className="mr-2 accent-green-600" type="checkbox" value="Termurah" name="Termurah"/>
@@ -130,9 +137,64 @@ function App() {
       <div className="pt-5">
         <h2 className="text-lg font-medium mb-3">Price</h2>
       </div>
+          </div>
+          
+{/* LIST PRODUCT */}
+
+          <div className="flex flex-wrap p-10 place-self-auto">
+            <div className="m-2 p-2 border-2 rounded-lg">
+            <img src="./images/bolu_susun.png" className="" alt="bolu_susun"/>
+              <h3 className="font-semibold">Bolu Susun</h3>
+              <p>Disusun dengan penuh kenangan</p>
+              <h3>40.000</h3>
+              <strike>36.000</strike>
+            </div>
+
+            <div className="m-2 p-2 border-2 rounded-lg">
+            <img src="./images/mie_aceh.png" className="" alt="mie_aceh"/>
+              <h3 className="font-semibold">Mie Aceh</h3>
+              <p>Rasanya menusuk jiwa dan raga</p>
+              <h3>26.000</h3>
+              <strike>30.000</strike>
+            </div>
+
+            <div className="m-2 p-2 border-2 rounded-lg">
+            <img src="./images/bolu_lapis.png" className="" alt="bolu_lapis"/>
+              <h3 className="font-semibold">Bolu Lapis</h3>
+              <p>Lapis legit di setiap sentuhan</p>
+              <h3>42.000</h3>
+            </div>
+
+            <div className="m-2 p-2 border-2 rounded-lg">
+            <img src="./images/bolu_susun.png" className="" alt="bolu_susun"/>
+              <h3 className="font-semibold">Bolu Susun</h3>
+              <p>Disusun dengan penuh kenangan</p>
+              <h3>40.000</h3>
+              <p>36.000</p>
+            </div>
+
+            <div className="m-2 p-2 border-2 rounded-lg">
+            <img src="./images/bolu_susun.png" className="" alt="bolu_susun"/>
+              <h3 className="font-semibold">Bolu Susun</h3>
+              <p>Disusun dengan penuh kenangan</p>
+              <h3>40.000</h3>
+              <p>36.000</p>
+            </div>
+
+            <div className="m-2 p-2 border-2 rounded-lg">
+            <img src="./images/bolu_susun.png" className="" alt="bolu_susun"/>
+              <h3 className="font-semibold">Bolu Susun</h3>
+              <p>Disusun dengan penuh kenangan</p>
+              <h3>40.000</h3>
+              <p>36.000</p>
+            </div>
+            
+          </div>
+
+      </div>
 
       {/* FOOTER */}
-      <div className="flex justify-between mb-10">
+      <div className="bg-gray-100 p-5 flex justify-between bg-mb-10">
         <div className="">
         <h2 className="text-lg font-medium mb-3">Get in Touch</h2>
         <p>About Us</p>
@@ -166,11 +228,11 @@ function App() {
           <p>Help</p>
         </div> 
         
-            
-        
       </div>
-        <p class="mb-5">Copyright @ 2022 tokokita.com</p>
+        <p className="p-5 text-center">Copyright @ 2022 tokokita.com</p>
+
     </div>
+    
   );
 }
 
