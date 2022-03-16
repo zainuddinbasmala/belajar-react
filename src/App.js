@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -6,9 +6,9 @@ function App() {
     <div className="bg-white container mx-auto">
       <div className="flex justify-between p-5 border-b border-blue-200">
         <div className="flex gap-3">
-          <a href="#" className="text-emerald-500">Chat With Us</a>
-          <a href="#">+62822 4568 1252</a>
-          <a href="#">zain@gmail.com</a>
+          <a href="https://google.com" className="text-emerald-500">Chat With Us</a>
+          <a href="https://google.com">+62822 4568 1252</a>
+          <a href="https://google.com">zain@gmail.com</a>
         </div>
 
         <div className="">
@@ -24,7 +24,7 @@ function App() {
         <h1 className="text-2xl font-bold">TokoKita</h1>
         <div className="flex w-full justify-center items-center">
         <input type="text" placeholder="Search Products, Categories" className="w-1/3 border border-gray-300 rounded-md pl-2 py-2"/>
-        <img src="./images/search.png" className="w-4 h-4 -ml-8" />
+        <img src="./images/search.png" alt="search" className="w-4 h-4 -ml-8" />
       </div>
         
       <div className="flex gap-8">
