@@ -30,7 +30,7 @@ function App() {
           <img src="./images/user.png" alt="user" className="w-6 h-6"/>
           <div className="relative">
             <img src="./images/basket.png" alt="basket" className="w-9"/>
-            <label className="absolute top-4 -left-2 bg-orange-600 text-white px-2 py-0.5 rounded-full text-sm">4</label>
+            <label className="absolute top-3 -left-2 bg-orange-600 text-white px-2 py-0.5 rounded-full text-sm">4</label>
           </div>
         </div>
       </div>
@@ -135,6 +135,14 @@ function App() {
 
       <div className="pt-5">
         <h2 className="text-lg font-medium mb-3">Price</h2>
+        <div className="flex gap-6 mb-5">
+        <input type="text" placeholder="Min" className="w-24 border border-gray-300 rounded-md pl-2 py-2"/>
+        <input type="text" placeholder="Max" className="w-24 border border-gray-300 rounded-md pl-2 py-2"/>
+        </div>
+        <div className="flex gap-5">
+        <label className="px-3 py-2 bg-orange-600 text-white rounded-lg text-sm">Submit</label>
+        <label className="px-3 py-2 bg-emerald-500 text-black rounded-lg text-sm">Reset</label>
+        </div>
       </div>
           </div>
           
