@@ -1,4 +1,6 @@
 import './App.css';
+import Menu from './components/Menu';
+import products from './Services/data/product';
 
 function App() {
   return (
@@ -35,24 +37,27 @@ function App() {
         </div>
       </div>
 
+{/* MENU */}
       <div className="bg-gray-100 py-4 pl-4 mt-4 text-lg  mt-4 font-medium">
         <ul className="flex gap-10">
-          <li>Bakery</li>
-          <li>Fruit and vegetables</li>
-          <li>Meat and fish</li>
-          <li>Drinks</li>
-          <li>Kitchen</li>
-          <li>Special nutrition</li>
-          <li>Baby</li>
-          <li>Pharmacy</li>
+          <Menu title="Bakery"/>
+          <Menu title="Fruit and vegetables"/>
+          <Menu title="Meat and fish"/>
+          <Menu title="Drinks"/>
+          <Menu title="Kitchen"/>
+          <Menu title="Special nutrition"/>
+          <Menu title="Baby"/>
+          <Menu title="Pharmacy"/>
         </ul>
       </div>
 
 {/* NAV BAR */}
 
-      <div className="flex flex-row">
-          <div className="p-5 basis-1/2">
-            <h2 className="text-lg font-medium mb-3 mt-3">Categories</h2>
+    <div className="flex basis-1/2">
+
+        <div className="basis-1/4">
+        <h2 className="text-lg font-medium mb-3 mt-3">Categories</h2>
+
           <div className="flex justify-between mb-1">
             <label>Bolu</label>
             <label className="bg-slate-100 text-lime-600 font-bold rounded-xl px-2">320</label>
@@ -74,19 +79,19 @@ function App() {
           </div>
 
           <div className="pt-5">
-        <h2 className="flex text-lg font-medium mb-3">Order By</h2>
-        <div>
+          <h2 className="flex text-lg font-medium mb-3">Order By</h2>
+          <div>
           <input className="mr-2 accent-green-600" type="checkbox" value="Termurah" name="Termurah"/>
           <label for="Termurah">Termurah</label>
-        </div>
-        <div>
+          </div>
+          <div>
           <input className="mr-2 accent-green-600" type="checkbox" value="Terlaris" name="Terlaris"/>
           <label for="Terlaris">Terlaris</label>
-        </div>
-        <div>
+          </div>
+          <div>
           <input className="mr-2 accent-green-600" type="checkbox" value="Termahal" name="Termahal"/>
           <label for="Termahal">Termahal</label>
-        </div>
+          </div>
       </div>
 
       <div className="pt-5">
@@ -135,6 +140,9 @@ function App() {
 
       <div className="pt-5">
         <h2 className="text-lg font-medium mb-3">Price</h2>
+        <div className="mb-2">
+        <input type="range" className="w-full h-3 rounded outline-none"/>
+        </div>
         <div className="flex gap-6 mb-5">
         <input type="text" placeholder="Min" className="w-24 border border-gray-300 rounded-md pl-2 py-2"/>
         <input type="text" placeholder="Max" className="w-24 border border-gray-300 rounded-md pl-2 py-2"/>
@@ -144,138 +152,86 @@ function App() {
         <label className="px-3 py-2 bg-emerald-500 text-black rounded-lg text-sm">Reset</label>
         </div>
       </div>
-          </div>
+      </div>
+
+    
           
 {/* LIST PRODUCT */}
 
-          <div className="flex flex-wrap p-10 place-self-auto">
-            <div className="m-2 p-2 border-2 rounded-lg">
-            <div className="relative">
-            <img src="./images/bolu_susun.png" alt="bolu_susun" className=""/>
-            <label className="absolute top-2 left-2 bg-white text-red px-2 py-0.5 rounded-lg text-sm">-30 %</label>
-            </div>  
-              <h3 className="font-semibold">Bolu Susun</h3>
-              <p>Disusun dengan penuh kenangan</p>
-              <h3>40.000</h3>
-              <div className="flex justify-between">
-              <strike>36.000</strike>
-              <label className="px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</label>
-              </div>
-            </div>
+    <div className="flex flex-wrap p-10 w-3/4">
 
-            <div className="m-2 p-2 border-2 rounded-lg">
-            <div className="relative">
-            <img src="./images/mie_aceh.png" className="" alt="mie_aceh"/>
-            <label className="absolute top-2 left-2 bg-white text-red px-2 py-0.5 rounded-lg text-sm">-30 %</label>
-            </div>
-              <h3 className="font-semibold">Mie Aceh</h3>
-              <p>Rasanya menusuk jiwa dan raga</p>
-              <h3>26.000</h3>
-              <div className="flex justify-between">
-              <strike>36.000</strike>
-              <label className="px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</label>
-              </div>
-            </div>
-
-            <div className="m-2 p-2 border-2 rounded-lg">
-            <div className="relative">
-            <img src="./images/bolu_lapis.png" className="" alt="bolu_lapis"/>
-            <label className="absolute top-2 left-2 bg-white text-red px-2 py-0.5 rounded-lg text-sm">-30 %</label>
-            </div>
-              <h3 className="font-semibold">Bolu Lapis</h3>
-              <p>Lapis legit di setiap sentuhan</p>
-              <h3>42.000</h3>
-              
-              <div className="flex justify-between">
-              <strike>36.000</strike>
-              <label className="px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</label>
-              </div>
-            </div>
-
-            <div className="m-2 p-2 border-2 rounded-lg">
-            <img src="./images/donut.png" className="" alt="donut"/>
-              <h3 className="font-semibold">Donut</h3>
-              <p>Disusun dengan penuh kenangan</p>
-              <h3>40.000</h3>
-              <div className="flex justify-between">
-              <strike></strike>
-              <label className="px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</label>
-              </div>
-            </div>
-
-            <div className="m-2 p-2 border-2 rounded-lg">
-            <img src="./images/pizza_hut.png" className="" alt="pizza"/>
-              <h3 className="font-semibold">Pizza Hut</h3>
-              <p>Disusun dengan penuh kenangan</p>
-              <h3>40.000</h3>
-              <div className="flex justify-between">
-              <strike></strike>
-              <label className="px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</label>
-              </div>
-            </div>
-
-            <div className="m-2 p-2 border-2 rounded-lg">
-            <img src="./images/mata_sapi.png" className="" alt="matasapi"/>
-              <h3 className="font-semibold">Telor Mata Sapi</h3>
-              <p>Disusun dengan penuh kenangan</p>
-              <h3>40.000</h3>
-              <div className="flex justify-between">
-              <strike></strike>
-              <label className="px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</label>
-              </div>
-            </div>
-            
+      {products.map((item, index) => {
+        const priceAfterDiscount = item.originalPrice - (item.originalPrice * item.discountPercent) /100;
+        return (
+          <div className="m-2 p-2 border-2 rounded-lg w-64">
+            {item.discountPercent > 0 && (
+          <p className="absolute top-2 left-2 bg-white text-red px-2 py-0.5 rounded-lg text-sm">- {item.discountPercent}%</p>)}
+          <div className="relative">
+          <img src={`images/${item.image}`} className="" alt={item.name}/>
+          {item.discountPercent > 0 && (<p className="absolute top-2 left-2 bg-white text-red px-2 py-0.5 rounded-lg text-sm">- {item.discountPercent}%</p>)}</div>
+          <h3 className="font-semibold">{item.name}</h3>
+          <p>{item.description}</p>
+          {item.discountPercent > 0 && (
+          <p className="text-xs line-through">Rp. {item.originalPrice}</p>)}
+          <div className="flex flex-wrap justify-between">
+          <p className="font-semibold">Rp. {priceAfterDiscount}</p>
+          <button className="flex-end px-3 py-2 bg-orange-600 text-white rounded-full text-sm">BUY NOW</button>
           </div>
-
-      </div>
-
-      {/* FOOTER */}
-      <div className="bg-gray-100 p-5 flex justify-between bg-mb-10">
-        <div className="">
-        <h2 className="text-lg font-medium mb-3">Get in Touch</h2>
-        <div className="text-emerald-500">
-        <p>About Us</p>
-        <p>Careers</p>
-        <p>Press Release</p>
-        <p>Blog</p>
-        </div>
-        </div>
-
-        <div className="">
-          <h2 className="text-lg font-medium mb-3">Connections</h2>
-          <div className="text-emerald-500">
-          <p>Facebook</p>
-          <p>Twitter</p>
-          <p>Instagram</p>
-          <p>Youtube</p>
-          <p>Link edln</p>
           </div>
-        </div>
-
-        <div className="">
-          <h2 className="text-lg font-medium mb-3">Earning</h2>
-          <div className="text-emerald-500">
-          <p>Become an Affiliate</p>
-          <p>Advertise yout product</p>
-          <p>Sell on Market</p>
-          </div>
-        </div>
-
-        <div class="">
-          <h2 class="text-lg font-medium mb-3">Account</h2>
-          <div className="text-emerald-500">
-          <p>Your account</p>
-          <p>Returns centre</p>
-          <p>100 % purchase protection</p>
-          <p>Chat with us</p>
-          <p>Help</p>
-          </div>
-        </div> 
-        
-      </div>
-        <p className="p-5 text-center">Copyright @ 2022 tokokita.com</p>
+        )
+      })}
 
     </div>
+
+  </div>
+
+
+{/* FOOTER */}
+
+<div className="bg-gray-100 p-5 flex justify-between bg-mb-10">
+       <div className="">
+         <h2 className="text-lg font-medium mb-3">Get in Touch</h2>
+         <div className="text-emerald-500">
+         <p>About Us</p>
+         <p>Careers</p>
+         <p>Press Release</p>
+         <p>Blog</p>
+         </div>
+         </div>
+
+         <div className="">
+           <h2 className="text-lg font-medium mb-3">Connections</h2>
+           <div className="text-emerald-500">
+           <p>Facebook</p>
+           <p>Twitter</p>
+           <p>Instagram</p>
+           <p>Youtube</p>
+           <p>Link edln</p>
+           </div>
+         </div>
+
+         <div className="">
+           <h2 className="text-lg font-medium mb-3">Earning</h2>
+           <div className="text-emerald-500">
+           <p>Become an Affiliate</p>
+           <p>Advertise yout product</p>
+           <p>Sell on Market</p>
+           </div>
+         </div>
+
+         <div class="">
+           <h2 class="text-lg font-medium mb-3">Account</h2>
+           <div className="text-emerald-500">
+           <p>Your account</p>
+           <p>Returns centre</p>
+           <p>100 % purchase protection</p>
+           <p>Chat with us</p>
+           <p>Help</p>
+           </div>
+         </div> 
+         </div>
+         <p className="flex justify-center mt-4 mb-4">Copyright @ 2022 tokokita.com</p>
+         </div>
     
   );
 }
